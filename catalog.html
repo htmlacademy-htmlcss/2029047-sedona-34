@@ -3,8 +3,12 @@
 <head>
   <meta charset="utf-8">
   <title>Каталог</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
+<div class="wrapper">
 <header class="header">
   <a class="header__logo"><img class="header__logo-img" src="images/logo-header.svg"  width="139" height="70" alt="Седона."></a>
   <nav class="menu">
@@ -44,42 +48,40 @@
         <span class="breadcrumbs__current">Гостиницы</span>
       </li>
     </ul>
+    <div class="catalog-filter">
+      <h2 class="visually-hidden">Фильтры по критериями</h2>
+      <form class="catalog-filter__form" action="https://echo.htmlacademy.ru/" method="post">
+        <fieldset class="catalog-filter__group">
+          <legend class="catalog-filter__title">Инфраструктура:</legend>
+          <input type="checkbox" name="infrastructure" value="pool" id="infrastructure-pool" checked>
+          <label for="infrastructure-pool">Бассейн</label>
+          <input type="checkbox" name="infrastructure" value="parking" id="infrastructure-parking" checked>
+          <label for="infrastructure-parking">Парковка</label>
+          <input type="checkbox" name="infrastructure" value="wi-fi" id="infrastructure-wi-fi">
+          <label for="infrastructure-wi-fi">Wi-Fi</label>
+        </fieldset>
+        <fieldset class="catalog-filter__group">
+          <legend class="catalog-filter__title">Тип жилья:</legend>
+          <input type="radio" name="housing" value="pool" id="housing-hotel" checked>
+          <label for="housing-hotel">Гостиница</label>
+          <input type="radio" name="housing" value="parking" id="housing-motel">
+          <label for="housing-motel">Мотель</label>
+          <input type="radio" name="housing" value="wi-fi" id="housing-apartments">
+          <label for="housing-apartments">Апартаменты</label>
+        </fieldset>
+        <fieldset class="catalog-filter__group">
+          <legend class="catalog-filter__title">Стоимость, ₽:</legend>
+          <input type="text" name="from" value="0" id="from">
+          <label for="from">от</label>
+          <input type="text" name="before" value="9000" id="before">
+          <label for="before">до</label>
+          <!--<input type="range" min="0" max="9000" step="1">-->
+        </fieldset>
+        <button class="base-button base-button--blue" type="submit">Применить</button>
+        <button class="catalog-filter__reset" type="reset">Сбросить</button>
+      </form>
+    </div>
   </section>
-
-  <section class="catalog-filter">
-    <h2 class="visually-hidden">Фильтры по критериями</h2>
-    <form class="catalog-filter__form" action="https://echo.htmlacademy.ru/" method="post">
-      <fieldset class="catalog-filter__group">
-        <legend class="catalog-filter__title">Инфраструктура:</legend>
-        <input type="checkbox" name="infrastructure" value="pool" id="infrastructure-pool" checked>
-        <label for="infrastructure-pool">Бассейн</label>
-        <input type="checkbox" name="infrastructure" value="parking" id="infrastructure-parking" checked>
-        <label for="infrastructure-parking">Парковка</label>
-        <input type="checkbox" name="infrastructure" value="wi-fi" id="infrastructure-wi-fi">
-        <label for="infrastructure-wi-fi">Wi-Fi</label>
-      </fieldset>
-      <fieldset class="catalog-filter__group">
-        <legend class="catalog-filter__title">Тип жилья:</legend>
-        <input type="radio" name="housing" value="pool" id="housing-hotel" checked>
-        <label for="housing-hotel">Гостиница</label>
-        <input type="radio" name="housing" value="parking" id="housing-motel">
-        <label for="housing-motel">Мотель</label>
-        <input type="radio" name="housing" value="wi-fi" id="housing-apartments">
-        <label for="housing-apartments">Апартаменты</label>
-      </fieldset>
-      <fieldset class="catalog-filter__group">
-        <legend class="catalog-filter__title">Стоимость, ₽:</legend>
-        <input type="text" name="from" value="0" id="from">
-        <label for="from">от</label>
-        <input type="text" name="before" value="9000" id="before">
-        <label for="before">до</label>
-        <!--<input type="range" min="0" max="9000" step="1">-->
-      </fieldset>
-      <button class="base-button base-button--blue" type="submit">Применить</button>
-      <button class="catalog-filter__reset" type="reset">Сбросить</button>
-    </form>
-  </section>
-
 
   <section class="catalog-results">
     <h2 class="visually-hidden">Список результатов</h2>
@@ -92,7 +94,7 @@
 
     <ul class="catalog-results__list">
       <li class="catalog-results__item">
-        <a class="catalog-results__link--active" href="#"><span class="visually-hidden">Показать плитками</span></a>
+        <a class="catalog-results__link catalog-results__link--active" href="#"><span class="visually-hidden">Показать плитками</span></a>
       </li>
       <li class="catalog-results__item">
         <a class="catalog-results__link" href="#"><span class="visually-hidden">Показать карточками</span></a>
@@ -184,8 +186,8 @@
   </section>
 
     <section class="subscription">
-      <h2 class="subscription__title">Подпишитесь на рассылку</h2>
-      <p class="subscription__text">Только полезная информация и никакого спама, честное бойскаутское!</p>
+      <h2 class="base-title">Подпишитесь на рассылку</h2>
+      <p class="base-text">Только полезная информация и никакого спама, честное бойскаутское!</p>
       <form class="subscription__form" action="https://echo.htmlacademy.ru/" method="post">
        <label><input type="text" name="e-mail" placeholder="Ваш e-mail"></label>
         <button class="subscription__button" type="submit">Подписаться</button>
@@ -239,5 +241,6 @@
     </svg>
   </a>
 </footer>
+</div>
 </body>
 </html>
