@@ -57,6 +57,7 @@ body {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 .base-button--blue {
@@ -114,7 +115,7 @@ body {
 }
 
 .menu {
-
+  //TODO
 }
 
 .menu__list {
@@ -188,7 +189,15 @@ body {
   margin: 0 auto 90px;
 }
 
+.advantages-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .advantages-card {
+  min-height: 384px;
+  padding-top: 103px;
   background-color: rgba(131, 179, 211, 0.12);
   font-size: 18px;
   line-height: 21px;
@@ -196,6 +205,7 @@ body {
 }
 
 .advantages-card__title {
+  margin: 0;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
@@ -203,8 +213,24 @@ body {
   color: #000000;
 }
 
+.advantages-card__text {
+  margin: 0;
+  padding-top: 30px;
+}
+
+.advantages-card__description {
+  margin: 0;
+  padding-top: 30px;
+}
+
 .advantages-list__image {
 //
+}
+
+.advantages-service-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .advantages-card--white {
@@ -212,6 +238,7 @@ body {
 }
 
 .advantages-card--dark-blue {
+  padding-top: 93px;
   background-color: #82B3D3;
   color: #FFFFFF;
 }
@@ -344,6 +371,7 @@ body {
 }
 
 .breadcrumbs__link {
+  margin-right: 25px;
   color: #FFFFFF;
 }
 
@@ -353,7 +381,19 @@ body {
 }
 
 .catalog-filter {
-  //TODO
+  //
+}
+
+.catalog-filter__form {
+  display: flex;
+  align-items: flex-start;
+}
+
+.catalog-filter__group {
+  margin: 0;
+  padding: 0;
+  border: none;
+  color: #FFFFFF;
 }
 
 .catalog-filter__title {
@@ -361,11 +401,17 @@ body {
   font-size: 20px;
   line-height: 26px;
   text-transform: capitalize;
-  color: #FFFFFF;
+}
+
+.catalog-filter__button-group {
+  padding-top: 56px;
 }
 
 .catalog-filter__reset {
-  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto 0;
   padding: 0;
   border: none;
   background: none;
@@ -373,6 +419,7 @@ body {
   font-size: 16px;
   line-height: 20px;
   text-align: center;
+  cursor: pointer;
 }
 
 .catalog-results {
@@ -382,6 +429,7 @@ body {
 .catalog-results__head {
   display: flex;
   align-items: center;
+  margin-bottom: 60px;
 }
 
 .catalog-results__text {
@@ -409,8 +457,14 @@ body {
   list-style: none;
 }
 
+.catalog-results__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .object-card {
-  //TODO
+  padding: 20px;
 }
 
 .object-card__title {
