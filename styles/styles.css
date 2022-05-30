@@ -13,6 +13,7 @@
 }
 
 body {
+  height: 100%;
   margin: 0;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
@@ -21,7 +22,14 @@ body {
   background-color: #F2F2F2;
 }
 
+html {
+  height: 100%;
+}
+
 .wrapper {
+  display: grid;
+  grid-template-rows: max-content 1fr max-content;
+  min-height: 100%;
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
@@ -190,14 +198,27 @@ body {
 }
 
 .advantages-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
+.advantages-list__item {
+  min-width: 0;
+}
+
+.advantages-list__item--full {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-column: 1/-1;
+}
+
 .advantages-card {
   min-height: 384px;
-  padding-top: 103px;
+  padding: 103px 85px 40px;
+  box-sizing: border-box;
   background-color: rgba(131, 179, 211, 0.12);
   font-size: 18px;
   line-height: 21px;
@@ -224,10 +245,15 @@ body {
 }
 
 .advantages-list__image {
-//
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .advantages-service-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column: 1/-1;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -458,16 +484,39 @@ body {
 }
 
 .catalog-results__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
+.catalog-results__item {
+  min-width: 0;
+}
+
 .object-card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 20px;
+  row-gap: 16px;
+  align-items: flex-start;
   padding: 20px;
 }
 
+.object-card__image {
+  display: block;
+  width: 100%;
+  height: 211px;
+  object-fit: cover;
+  object-position: center;
+  grid-column: 1/-1;
+}
+
 .object-card__title {
+  margin: 0;
+  grid-column: 1/-1;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
@@ -475,12 +524,14 @@ body {
 }
 
 .object-card__subtitle {
+  margin: 0;
   font-size: 18px;
   line-height: 21px;
   color: #333333;
 }
 
 .object-card__text {
+  margin: 0;
   font-size: 18px;
   line-height: 21px;
   color: #333333;
