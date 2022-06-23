@@ -244,7 +244,7 @@ html {
   display: block;
   width: 18px;
   height: 18px;
-  color: black;
+  color: #000000;
 }
 
 .user-menu__link--search:hover {
@@ -265,7 +265,7 @@ html {
   width: 18px;
   height: 17px;
   margin-right: 35px;
-  color: black;
+  color: #000000;
 }
 
 .user-menu__link--favorite:hover {
